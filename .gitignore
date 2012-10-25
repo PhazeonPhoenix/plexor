@@ -1,0 +1,9 @@
+.*
+!.gitignore
+*~
+*.sublime-workspace
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
