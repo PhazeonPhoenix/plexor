@@ -7,9 +7,9 @@ export PAGER="/usr/bin/less"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Load files from .bash.d
-if test -d .bash.d; then
-        for file in .bash.d/*.sh; do
+# Load *.sh files from .plexlib/bash
+if test -d .plexlib/bash; then
+        for file in .plexlib/bash/*.sh; do
                 test -r "$file" && . "$file"
         done
         unset file
