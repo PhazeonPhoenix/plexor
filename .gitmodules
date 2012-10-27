@@ -1,0 +1,18 @@
+[submodule "src/tmux.d/tmux-powerline"]
+	path = src/tmux.d/tmux-powerline
+	url = git@github.com:PhazeonPhoenix/tmux-powerline.git
+[submodule "src/tmux.d/tmux-colors-solarized"]
+	path = src/tmux.d/tmux-colors-solarized
+	url = git://github.com/seebi/tmux-colors-solarized.git
+[submodule "src/plexlib/tmux-powerline"]
+	path = src/plexlib/tmux-powerline
+	url = git@github.com:PhazeonPhoenix/tmux-powerline.git
+[submodule "src/plexlib/dircolors-solarized"]
+	path = src/plexlib/dircolors-solarized
+	url = git://github.com/seebi/dircolors-solarized.git
+[submodule "src/plexlib/tmux-colors-solarized"]
+	path = src/plexlib/tmux-colors-solarized
+	url = git://github.com/seebi/tmux-colors-solarized.git
+[submodule "src/plexlib/solarized"]
+	path = src/plexlib/solarized
+	url = git://github.com/altercation/solarized.git

@@ -1,0 +1,12 @@
+# .bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Load *.sh files from .plexlib/bash
+if test -d $HOME/.plexlib/bash; then
+        for file in $HOME/.plexlib/bash/*.sh; do
+                test -r "$file" && . "$file"
+        done
+        unset file
+fi
