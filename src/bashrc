@@ -3,9 +3,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+PLIBPATH=$HOME/.plexlib
+
 # Load *.sh files from .plexlib/bash
-if test -d $HOME/.plexlib/bash; then
-        for file in $HOME/.plexlib/bash/*.sh; do
+if test -d $PLIBPATH/bash; then
+        for file in $PLIBPATH/bash/*.sh; do
                 test -r "$file" && . "$file"
         done
         unset file

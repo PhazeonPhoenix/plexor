@@ -1,1 +1,1 @@
-eval $(dircolors $HOME/.plexlib/dircolors-solarized/dircolors.ansi-universal)
+eval $(dircolors $PLIBPATH/dircolors-solarized/dircolors.ansi-universal)
