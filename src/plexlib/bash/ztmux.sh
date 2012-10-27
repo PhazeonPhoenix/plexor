@@ -10,7 +10,7 @@ fi
 if tmux has-session -t main 2>/dev/null; then
     TMUXLIB=$HOME/.plexlib/tmux
     if [ -d $TMUXLIB ]; then
-        for file in $(find $TMUXLIB -type f -name \*.conf); do
+        for file in $(find $TMUXLIB -name \*.conf); do
             tmux source-file $file
         done
     fi
