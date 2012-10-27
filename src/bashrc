@@ -3,12 +3,43 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PLIBPATH=$HOME/.plexlib
+export EDITOR="/usr/bin/vim"
+export PAGER="/usr/bin/less"
+export LANG="en_US.UTF-8"
 
-# Load *.sh files from .plexlib/bash
-if test -d $PLIBPATH/bash; then
-        for file in $PLIBPATH/bash/*.sh; do
-                test -r "$file" && . "$file"
-        done
-        unset file
+alias cal='cal -3'
+alias df='df -h'
+alias du='du -sh'
+alias less='less -R'
+alias grep='GREP_COLOR="1;33;40" LANG=C grep --color=auto'
+alias l.='ls -dF .* --color=auto'
+alias ll='ls -lFh --color=auto'
+alias lld='ls -ldFh --color=auto'
+alias ls='ls -hF --color=auto'
+alias la='ls -hA --color=auto'
+alias lla='ls -lhA --color=auto'
+alias pacman='pacman-color'
+alias top='htop'
+alias yogurt='yaourt'
+
+eval $(dircolors $HOME/.dir_colors)
+
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
+
+# Enable history appending instead of overwriting.  #139609
+shopt -s histappend
+
+# Disable Ctrl-S and Ctrl-Q from terminal sessions
+stty -ixon
+
+if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+    if tmux has-session -t main 2>/dev/null; then
+        tmux attach -t main
+    else
+        tmux new -s main
+    fi
 fi
