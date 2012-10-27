@@ -1,23 +1,11 @@
 #!/usr/bin/env bash
 
-CWD=$(pwd)
+cd src
 
-pushd $CWD/src
-
-if [ -z "$1" ]; then
-    echo "You must specify a target."
-    exit
-else
-    WORKINGDIR=$1
-fi
-
-if [ ! -d $WORKINGDIR ]; then
-    mkdir $WORKINGDIR
-fi
-
-for file in * ; do
-    cp -Rv $file $WORKINGDIR/.$file
+for file in $(find *); do
+    if [ -d $file ]; then
+        mkdir $HOME/.$file 2>/dev/null
+    else
+        cp -v $file $HOME/.$file
+    fi
 done
-
-
-
