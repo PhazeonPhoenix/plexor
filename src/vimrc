@@ -86,8 +86,4 @@ if $t_Co != 255
   set t_Co=16
 endif
 
-" Color line numbers in dark grey
-highlight LineNr ctermfg=darkgrey
-
-" Color the current line white on dark grey
-highlight CursorLine cterm=NONE ctermbg=darkgray ctermfg=white
+colorscheme solarized
