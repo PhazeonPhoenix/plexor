@@ -87,3 +87,4 @@ if $t_Co != 255
 endif
 
 colorscheme solarized
+source ~/.vimrc.local

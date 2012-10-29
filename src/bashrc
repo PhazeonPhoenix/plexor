@@ -39,6 +39,10 @@ shopt -s histappend
 # Disable Ctrl-S and Ctrl-Q from terminal sessions
 stty -ixon
 
+# Local change support
+
+if [ -r $HOME/.bashrc_local ] && source $HOME/.bashrc_local
+
 if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
     if tmux has-session -t main 2>/dev/null; then
         tmux attach -t main
@@ -46,3 +50,5 @@ if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
         tmux new -s main
     fi
 fi
+
+
