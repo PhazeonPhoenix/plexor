@@ -1,5 +1,7 @@
 # Plexor #
 
+![Plexor screenshot](screenshot.png)
+
 The evolution of dotfiles. This is my new combined configuration for several
 linux apps to work in concert. It's based heavilly on the Solarized color 
 scheme for as many items as possible and designed to be drop in usable for
