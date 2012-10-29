@@ -9,3 +9,5 @@ for file in $(find *); do
         cp -v $file $HOME/.$file
     fi
 done
+
+touch $HOME/.bashrc.local $HOME/.vimrc.local $HOME/.tmux.conf.local
