@@ -1,6 +1,6 @@
 # Plexor #
 
-![Plexor screenshot](screenshot.png)
+![Plexor screenshot](https://raw.github.com/PhazeonPhoenix/plexor/master/screenshot.png)
 
 The evolution of dotfiles. This is my new combined configuration for several
 linux apps to work in concert. It's based heavilly on the Solarized color 
