@@ -26,11 +26,14 @@ Just install any missing apps.
 
 ## Installation ##
 
-Simple. Clone and run ./install.sh.
+Simple. Clone and run ./install.sh. You can optionally provide a path to install
+the files to. 
 
-**WARNING** This WILL overwrite already existing configs. You have been warned.
+**WARNING** This WILL overwrite already existing files. You have been warned.
+You can also manually copy the files into your home directory.
 
 ## Configure your terminal ##
 
 To completely experience this colorscheme you need to configure your terminal
-with the solarized color pallet. I've included the reg file for PuTTY.
+with the solarized color pallet. I've included the reg file for PuTTY and the
+included Xresources file will configure xterm derived terminal.
