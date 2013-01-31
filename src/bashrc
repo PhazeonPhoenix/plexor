@@ -3,8 +3,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source $HOME/.git-completion.sh
 source $HOME/.git-prompt.sh
+source $HOME/.bash_completion/*.sh
 
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
