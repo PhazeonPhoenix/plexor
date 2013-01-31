@@ -9,6 +9,8 @@ source $HOME/.git-prompt.sh
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
 export LANG="en_US.UTF-8"
+export PACMAN=/usr/bin/pacman 
+[ -f /usr/bin/pacman-color ] && export PACMAN=/usr/bin/pacman-color
 
 alias cal='cal -3'
 alias df='df -h'
@@ -21,9 +23,37 @@ alias ll='ls -lFh --color=auto'
 alias lla='ls -lhA --color=auto'
 alias lld='ls -ldFh --color=auto'
 alias ls='ls -hF --color=auto'
-alias pacman='pacman-color'
-alias top='htop'
-alias yogurt='yaourt'
+alias mkdir='mkdir -p -v'
+
+# Optional aliases
+#alias top='htop'
+#alias yogurt='yaourt'
+
+## Arch Linux specific aliases
+alias pacman='$PACMAN'
+
+# Pacman alias examples
+# Synchronize with repositories before upgrading packages that are out of date on the local system.
+alias pacupg='sudo $PACMAN -Syu'
+# Install specific package(s) from the repositories
+alias pacin='sudo $PACMAN -S'
+# Install specific package not from the repositories but from a file
+alias pacins='sudo $PACMAN -U'
+# Remove the specified package(s), retaining its configuration(s) and required dependencies
+alias pacre='sudo $PACMAN -R'
+# Remove the specified package(s), its configuration(s) and unneeded dependencies
+alias pacrem='sudo $PACMAN -Rns'
+# Display information about a given package in the repositories
+alias pacrep='$PACMAN -Si'
+# Search for package(s) in the repositories
+alias pacreps='$PACMAN -Ss'
+# Display information about a given package in the local database
+alias pacloc='$PACMAN -Qi'
+# Search for package(s) in the local database
+alias paclocs='$PACMAN -Qs'
+
+
+
 
 eval $(dircolors $HOME/.dir_colors)
 
