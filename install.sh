@@ -17,5 +17,5 @@ wget https://raw.github.com/ginatrapani/todo.txt-cli/master/todo.sh -O $HOME/bin
 chmod +x $HOME/bin/todo.sh
 mkdir $HOME/todo > /dev/null 2>&1
 
-wget https://raw.github.com/ginatrapani/todo.txt-cli/master/todo_completion -O $HOME/.bash_completion/todo_completion.sh
+wget https://raw.github.com/ginatrapani/todo.txt-cli/master/todo_completion -O $HOME/.bash_completion.d/todo_completion.sh
 
