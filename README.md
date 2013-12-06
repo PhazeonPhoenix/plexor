@@ -22,7 +22,6 @@ Just install any missing apps.
 
 * multitail
 * htop
-* pacman-color
 
 ## Installation ##
 

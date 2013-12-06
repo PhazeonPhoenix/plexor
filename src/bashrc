@@ -9,8 +9,6 @@ source $HOME/.bash_completion.d/*.sh
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
 export LANG="en_US.UTF-8"
-export PACMAN=/usr/bin/pacman 
-[ -f /usr/bin/pacman-color ] && export PACMAN=/usr/bin/pacman-color
 
 [ -d $HOME/bin ] && export PATH=${PATH}:${HOME}/bin
 
@@ -33,27 +31,24 @@ alias todo='todo.sh'
 #alias yogurt='yaourt'
 
 ## Arch Linux specific aliases
-alias pacman='$PACMAN'
-
-# Pacman alias examples
 # Synchronize with repositories before upgrading packages that are out of date on the local system.
-alias pacupg='sudo $PACMAN -Syu'
+alias pacupg='sudo pacman -Syu'
 # Install specific package(s) from the repositories
-alias pacin='sudo $PACMAN -S'
+alias pacin='sudo pacman -S'
 # Install specific package not from the repositories but from a file
-alias pacins='sudo $PACMAN -U'
+alias pacins='sudo pacman -U'
 # Remove the specified package(s), retaining its configuration(s) and required dependencies
-alias pacre='sudo $PACMAN -R'
+alias pacre='sudo pacman -R'
 # Remove the specified package(s), its configuration(s) and unneeded dependencies
-alias pacrem='sudo $PACMAN -Rns'
+alias pacrem='sudo pacman -Rns'
 # Display information about a given package in the repositories
-alias pacrep='$PACMAN -Si'
+alias pacrep='pacman -Si'
 # Search for package(s) in the repositories
-alias pacreps='$PACMAN -Ss'
+alias pacreps='pacman -Ss'
 # Display information about a given package in the local database
-alias pacloc='$PACMAN -Qi'
+alias pacloc='pacman -Qi'
 # Search for package(s) in the local database
-alias paclocs='$PACMAN -Qs'
+alias paclocs='pacman -Qs'
 
 
 
