@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 cd src
+mkdir $HOME/.bash_completion.d > /dev/null 2>&1
 
 for file in $(find *); do
     if [ -d $file ]; then
