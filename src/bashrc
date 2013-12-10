@@ -27,11 +27,16 @@ export LANG="en_US.UTF-8"
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
 
-# Enable history appending instead of overwriting.  #139609
-shopt -s histappend
-
 # Disable Ctrl-S and Ctrl-Q from terminal sessions
 stty -ixon
+
+# History fun!
+shopt -s histappend # append history rather than overwriting
+export HISTCONTROL=ignoreboth # ignore duplicates and commands prefixed with a space
+export HISTIGNORE='history*' #so the history doesn't fill itself with itself
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
 
 # display error codes
 EC() { echo -e '\e[1;33m'retcode $?'\e[m'; }
@@ -179,7 +184,7 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-PROMPT_COMMAND="__git_ps1 '\[$Blue\]\u\[$Color_Off\]@\[$Cyan\]\h \[$Yellow\]\w\[$Color_Off\]' ' \\\$ '"
+PROMPT_COMMAND="history -a;history -n;__git_ps1 '\[$Blue\]\u\[$Color_Off\]@\[$Cyan\]\h \[$Yellow\]\w\[$Color_Off\]' ' \\\$ '"
 
 GIT_PS1_SHOWDIRTYSTATE=yes
 GIT_PS1_SHOWSTASHSTATE=yes
